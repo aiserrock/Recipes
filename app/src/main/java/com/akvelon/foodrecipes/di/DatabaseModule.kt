@@ -2,7 +2,7 @@ package com.akvelon.foodrecipes.di
 
 import android.content.Context
 import androidx.room.Room
-import com.akvelon.foodrecipes.Constants.Companion.DATABASE_NAME
+import com.akvelon.foodrecipes.util.Constants.Companion.DATABASE_NAME
 import com.akvelon.foodrecipes.data.database.RecipesDatabase
 import dagger.Module
 import dagger.Provides

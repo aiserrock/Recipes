@@ -1,4 +1,4 @@
-package com.akvelon.foodrecipes
+package com.akvelon.foodrecipes.util
 
 class Constants {
     companion object {
