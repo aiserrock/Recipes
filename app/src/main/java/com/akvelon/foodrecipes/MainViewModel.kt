@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import com.akvelon.foodrecipes.data.Repository
 import com.akvelon.foodrecipes.models.FoodRecipe
 import com.akvelon.foodrecipes.util.NetworkResult
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import retrofit2.Response
 

@@ -5,10 +5,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
+import coil.load
 import com.akvelon.foodrecipes.R
 
 class RecipesRowBinding {
     companion object {
+
+        @BindingAdapter("loadImageFromUrl")
+        @JvmStatic
+        fun ladImageFromUrl(imageView: ImageView,imageUrl: String){
+            imageView.load(imageUrl){
+                crossfade(600)
+            }
+        }
         @BindingAdapter("setNumberOfLikes")
         @JvmStatic
         fun setNumberOfLikes(textView: TextView, likes: Int) {
