@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.akvelon.foodrecipes.RecipesFragment"
+        android:name="com.akvelon.foodrecipes.ui.fragments.recipes.RecipesFragment"
         android:label="Recipes"
         tools:layout="@layout/fragment_recepies" />
     <fragment
         android:id="@+id/favoriteRecepiesFragment"
-        android:name="com.akvelon.foodrecipes.FavoriteRecepiesFragment"
+        android:name="com.akvelon.foodrecipes.ui.fragments.favorites.FavoriteRecepiesFragment"
         android:label="Favorites"
         tools:layout="@layout/fragment_favorite_recepies" />
     <fragment
         android:id="@+id/foodJokeFragment"
-        android:name="com.akvelon.foodrecipes.FoodJokeFragment"
+        android:name="com.akvelon.foodrecipes.ui.fragments.foodjoke.FoodJokeFragment"
         android:label="Food Joke"
         tools:layout="@layout/fragment_food_joke" />
 </navigation>
