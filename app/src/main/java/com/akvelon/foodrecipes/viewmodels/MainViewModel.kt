@@ -1,4 +1,4 @@
-package com.akvelon.foodrecipes
+package com.akvelon.foodrecipes.viewmodels
 
 import android.app.Application
 import android.content.Context
@@ -59,7 +59,6 @@ class MainViewModel @Inject constructor(
                 return NetworkResult.Error(response.message())
             }
         }
-
     }
 
     private fun hasInternetConnection(): Boolean {

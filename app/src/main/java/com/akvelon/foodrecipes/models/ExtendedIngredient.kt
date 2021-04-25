@@ -1,6 +1,5 @@
 package com.akvelon.foodrecipes.models
 
-
 import com.google.gson.annotations.SerializedName
 
 data class ExtendedIngredient(

@@ -2,8 +2,8 @@ package com.akvelon.foodrecipes.di
 
 import android.content.Context
 import androidx.room.Room
-import com.akvelon.foodrecipes.util.Constants.Companion.DATABASE_NAME
 import com.akvelon.foodrecipes.data.database.RecipesDatabase
+import com.akvelon.foodrecipes.util.Constants.Companion.DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +18,7 @@ object DatabaseModule {
     @Provides
     fun provideDatabase(
         @ApplicationContext context: Context
-    )= Room.databaseBuilder(
+    ) = Room.databaseBuilder(
         context,
         RecipesDatabase::class.java,
         DATABASE_NAME
