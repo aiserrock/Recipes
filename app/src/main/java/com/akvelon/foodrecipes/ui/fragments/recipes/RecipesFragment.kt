@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.akvelon.foodrecipes.R
 import com.akvelon.foodrecipes.adapters.RecipesAdapter
+import com.akvelon.foodrecipes.databinding.FragmentRecepiesBinding
 import com.akvelon.foodrecipes.util.NetworkResult
 import com.akvelon.foodrecipes.util.observeOnce
 import com.akvelon.foodrecipes.viewmodels.MainViewModel
@@ -22,8 +23,9 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class RecipesFragment : Fragment() {
+    private var _binding: FragmentRecepiesBinding? = null
+    private val binding get() = _binding!!
     private lateinit var mainViewModel: MainViewModel
-    private lateinit var mView: View
     private lateinit var recipesViewModel: RecipesViewModel
     private val mAdapter by lazy { RecipesAdapter() }
 
@@ -39,16 +41,18 @@ class RecipesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        mView = inflater.inflate(R.layout.fragment_recepies, container, false)
+        _binding = FragmentRecepiesBinding.inflate(layoutInflater, container, false)
+        binding.lifecycleOwner = this
+        binding.mainViewModel = mainViewModel
 
         setupRecyclerView()
         readDatabase()
-        return mView
+        return binding.root
     }
 
     private fun setupRecyclerView() {
-        mView.recyclerview.adapter = mAdapter
-        mView.recyclerview.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerview.adapter = mAdapter
+        binding.recyclerview.layoutManager = LinearLayoutManager(requireContext())
         showShimmerEffect()
     }
 
@@ -105,10 +109,15 @@ class RecipesFragment : Fragment() {
     }
 
     private fun showShimmerEffect() {
-        mView.recyclerview.showShimmer()
+        binding.recyclerview.showShimmer()
     }
 
     private fun hideShimmerEffect() {
-        mView.recyclerview.hideShimmer()
+        binding.recyclerview.hideShimmer()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
