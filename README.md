@@ -28,7 +28,8 @@ Tech Tasks
 * Handling internet connection (StateFlow) Hot stream
 
 ## Main page  
-![image](https://github.com/aiserrock/Recipes/blob/master/png/main_screen.jpg)
+![image]()
+<img src="https://github.com/aiserrock/Recipes/blob/master/png/main_screen.jpg" alt="Main screen" width="250"/>
 
 ## Get started
 For run android app on your local machine do this:
