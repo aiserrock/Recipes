@@ -28,7 +28,6 @@ Tech Tasks
 * Handling internet connection (StateFlow) Hot stream
 
 ## Main page  
-![image]()
 <img src="https://github.com/aiserrock/Recipes/blob/master/png/main_screen.jpg" alt="Main screen" width="250"/>
 
 ## Get started
