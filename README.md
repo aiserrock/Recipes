@@ -27,6 +27,8 @@ Tech Tasks
 * Navigation
 * Handling internet connection (StateFlow) Hot stream
 
+## Main page  
+![alt text](https://github.com/aiserrock/Recipes/blob/master/png/Screenshot_1.png)  
 
 ## Get started
 For run android app on your local machine do this:
