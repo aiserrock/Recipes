@@ -27,7 +27,7 @@ Tech Tasks
 * Navigation
 * Handling internet connection (StateFlow) Hot stream
 
-## Main page  
+#### Main page  
 ![alt text](https://github.com/aiserrock/Recipes/blob/master/png/main_screen.jpg)
 
 ## Get started
