@@ -9,7 +9,11 @@
         android:id="@+id/recipesFragment"
         android:name="com.akvelon.foodrecipes.ui.fragments.recipes.RecipesFragment"
         android:label="Recipes"
-        tools:layout="@layout/fragment_recepies" />
+        tools:layout="@layout/fragment_recepies" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipesBottomSheet"
+            app:destination="@id/recipesBottomSheet" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteRecepiesFragment"
         android:name="com.akvelon.foodrecipes.ui.fragments.favorites.FavoriteRecepiesFragment"
@@ -20,4 +24,13 @@
         android:name="com.akvelon.foodrecipes.ui.fragments.foodjoke.FoodJokeFragment"
         android:label="Food Joke"
         tools:layout="@layout/fragment_food_joke" />
+    <dialog
+        android:id="@+id/recipesBottomSheet"
+        android:name="com.akvelon.foodrecipes.ui.fragments.recipes.bottomsheet.RecipesBottomSheet"
+        android:label="recipes_bottom_sheet"
+        tools:layout="@layout/recipes_bottom_sheet" >
+        <action
+            android:id="@+id/action_recipesBottomSheet_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+    </dialog>
 </navigation>
