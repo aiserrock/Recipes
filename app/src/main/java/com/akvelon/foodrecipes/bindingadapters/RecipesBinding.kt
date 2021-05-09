@@ -26,7 +26,7 @@ class RecipesBinding {
             }
         }
 
-        @BindingAdapter("readApiResponse2","readDatabase2",requireAll = true)
+        @BindingAdapter("readApiResponse2", "readDatabase2", requireAll = true)
         @JvmStatic
         fun errorTextViewVisibility(
             textView: TextView,

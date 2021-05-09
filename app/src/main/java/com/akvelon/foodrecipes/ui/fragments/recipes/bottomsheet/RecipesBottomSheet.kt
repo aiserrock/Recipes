@@ -16,8 +16,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.recipes_bottom_sheet.view.*
-import java.util.*
-
+import java.util.Locale
 
 class RecipesBottomSheet : BottomSheetDialogFragment() {
 
@@ -34,18 +33,22 @@ class RecipesBottomSheet : BottomSheetDialogFragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         val mView = inflater.inflate(R.layout.recipes_bottom_sheet, container, false)
 
-        recipesViewModel.readMealAndDietType.asLiveData().observe(viewLifecycleOwner, {
-            mealTypeChip = it.selectedMealType
-            dietTypeChip = it.selectedDietType
-            updateChip(it.selectedMealTypeId, mView.mealType_chipGroup)
-            updateChip(it.selectedDietTypeId, mView.dietType_chipGroup)
-        })
+        recipesViewModel.readMealAndDietType.asLiveData().observe(
+            viewLifecycleOwner,
+            {
+                mealTypeChip = it.selectedMealType
+                dietTypeChip = it.selectedDietType
+                updateChip(it.selectedMealTypeId, mView.mealType_chipGroup)
+                updateChip(it.selectedDietTypeId, mView.dietType_chipGroup)
+            }
+        )
 
         mView.mealType_chipGroup.setOnCheckedChangeListener { group, selectedChipId ->
             val chip = group.findViewById<Chip>(selectedChipId)

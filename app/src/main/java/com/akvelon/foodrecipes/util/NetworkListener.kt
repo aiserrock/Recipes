@@ -33,7 +33,6 @@ class NetworkListener : ConnectivityManager.NetworkCallback() {
 
     override fun onAvailable(network: Network) {
         isNetworkAvailable.value = true
-
     }
 
     override fun onLost(network: Network) {

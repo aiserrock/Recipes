@@ -2,8 +2,11 @@ package com.akvelon.foodrecipes.data
 
 import android.content.Context
 import androidx.datastore.DataStore
-import dagger.hilt.android.qualifiers.ApplicationContext
-import androidx.datastore.preferences.*
+import androidx.datastore.preferences.createDataStore
+import androidx.datastore.preferences.Preferences
+import androidx.datastore.preferences.edit
+import androidx.datastore.preferences.emptyPreferences
+import androidx.datastore.preferences.preferencesKey
 import com.akvelon.foodrecipes.util.Constants.Companion.DEFAULT_DIET_TYPE
 import com.akvelon.foodrecipes.util.Constants.Companion.DEFAULT_MEAL_TYPE
 import com.akvelon.foodrecipes.util.Constants.Companion.PREFERENCES_DIET_TYPE
@@ -11,6 +14,7 @@ import com.akvelon.foodrecipes.util.Constants.Companion.PREFERENCES_DIET_TYPE_ID
 import com.akvelon.foodrecipes.util.Constants.Companion.PREFERENCES_MEAL_TYPE
 import com.akvelon.foodrecipes.util.Constants.Companion.PREFERENCES_MEAL_TYPE_ID
 import com.akvelon.foodrecipes.util.Constants.Companion.PREFERENCES_NAME
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -65,7 +69,6 @@ class DateStoreRepository @Inject constructor(@ApplicationContext private val co
                 selectedDietTypeId
             )
         }
-
 }
 
 data class MealAndDietType(
