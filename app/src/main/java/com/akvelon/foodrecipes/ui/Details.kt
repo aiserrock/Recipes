@@ -10,6 +10,7 @@ import com.akvelon.foodrecipes.R
 import com.akvelon.foodrecipes.adapters.PagerAdapter
 import com.akvelon.foodrecipes.ui.fragments.ingredients.IngredientsFragment
 import com.akvelon.foodrecipes.ui.fragments.overview.OverviewFragment
+import com.akvelon.foodrecipes.util.Constants.Companion.RECIPE_RESULT_KEY
 import kotlinx.android.synthetic.main.activity_details.*
 
 class Details : AppCompatActivity() {
@@ -33,7 +34,7 @@ class Details : AppCompatActivity() {
         titles.add("Ingredients")
 
         val resultBundle = Bundle()
-        resultBundle.putParcelable("recipeBundle", args.result)
+        resultBundle.putParcelable(RECIPE_RESULT_KEY, args.result)
 
         val adapter = PagerAdapter(
             resultBundle,
