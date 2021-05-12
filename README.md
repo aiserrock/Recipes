@@ -8,8 +8,7 @@ https://spoonacular.com/
     3. Имеется возможность детального просмотра рецепта  
         В подробнее, пользователю будут доступны след возможности:  
         а. Фото блюда,название,описание,список диет, к которому можно отнести это блюдо  
-        б. ингредиенты  
-        в. PWA (вебсайт с инструкцией по приготовлению внутри мобильного приложения)  
+        б. ингредиенты   
     4. Корректно обрабатывать ошибки с сервера и иметь возможность хранить данные в локальной базе  
     (например когда нет интернета)  
     5. Настраиваемые фильтры по типу блюд и типу диеты для поиска в api  
@@ -28,7 +27,6 @@ Tech Tasks
 * Handling internet connection (StateFlow) Hot stream
 
 ## Main page  
-<img src="https://github.com/aiserrock/Recipes/blob/master/png/main_screen.jpg" alt="Main screen" width="250"/>
 
 ## Get started
 For run android app on your local machine do this:
