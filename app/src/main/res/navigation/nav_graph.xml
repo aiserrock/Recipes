@@ -17,6 +17,9 @@
             android:name="backFromBottomSheet"
             app:argType="boolean"
             android:defaultValue="false" />
+        <action
+            android:id="@+id/action_recipesFragment_to_details"
+            app:destination="@id/details" />
     </fragment>
     <fragment
         android:id="@+id/favoriteRecepiesFragment"
@@ -37,4 +40,13 @@
             android:id="@+id/action_recipesBottomSheet_to_recipesFragment"
             app:destination="@id/recipesFragment" />
     </dialog>
+    <activity
+        android:id="@+id/details"
+        android:name="com.akvelon.foodrecipes.ui.Details"
+        android:label="Details"
+        tools:layout="@layout/activity_details" >
+        <argument
+            android:name="result"
+            app:argType="com.akvelon.foodrecipes.models.Result" />
+    </activity>
 </navigation>
