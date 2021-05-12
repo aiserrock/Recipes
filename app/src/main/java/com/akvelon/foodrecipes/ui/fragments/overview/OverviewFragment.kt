@@ -10,6 +10,7 @@ import coil.load
 import com.akvelon.foodrecipes.R
 import com.akvelon.foodrecipes.models.Result
 import kotlinx.android.synthetic.main.fragment_overview.view.*
+import org.jsoup.Jsoup
 
 
 class OverviewFragment : Fragment() {
@@ -102,6 +103,11 @@ class OverviewFragment : Fragment() {
                     R.color.green
                 )
             )
+        }
+
+        myBundle?.summary.let{
+            val summary = Jsoup.parse(it).text()
+            view.summary_textView.text = summary
         }
 
         return view
