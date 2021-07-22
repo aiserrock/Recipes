@@ -26,7 +26,6 @@ Tech Tasks
 * Navigation
 * Handling internet connection (StateFlow) Hot stream
 
-## Main page  
 
 ## Get started
 For run android app on your local machine do this:
